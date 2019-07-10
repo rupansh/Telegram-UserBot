@@ -434,8 +434,7 @@ async def metoo(hahayes):
     """ Haha yes """
     if not hahayes.text[0].isalpha() and hahayes.text[0] not in (
             "/", "#", "@", "!"):
-        index = random.randint(0, len(METOOSTR) - 1)
-        reply_text = METOOSTR[index]
+        reply_text = random.choice(METOOSTR)
         await hahayes.edit(reply_text)
 
 
